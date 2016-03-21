@@ -1,0 +1,75 @@
+[Mon Mar 21 10:34:55.617677 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:34:55.617719 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Stack trace:
+[Mon Mar 21 10:34:55.617733 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:34:55.617740 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Mon Mar 21 10:34:55.617746 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:34:55.617898 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:34:55.617906 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Stack trace:
+[Mon Mar 21 10:34:55.617912 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:34:55.617917 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   2. yii\\log\\Logger->yii\\log\\{closure}() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:34:55.617922 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   3. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:120
+[Mon Mar 21 10:34:55.617927 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   4. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:34:55.617962 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:34:55.617966 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP Stack trace:
+[Mon Mar 21 10:34:55.617971 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:34:55.617975 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:34:55.617980 2016] [:error] [pid 9626] [client 127.0.0.1:40866] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:36:39.094166 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:36:39.094198 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Stack trace:
+[Mon Mar 21 10:36:39.094209 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:36:39.094215 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Mon Mar 21 10:36:39.094220 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:36:39.094358 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:36:39.094366 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Stack trace:
+[Mon Mar 21 10:36:39.094380 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:36:39.094385 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   2. yii\\log\\Logger->yii\\log\\{closure}() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:36:39.094389 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   3. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:120
+[Mon Mar 21 10:36:39.094394 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   4. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:36:39.094429 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:36:39.094433 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP Stack trace:
+[Mon Mar 21 10:36:39.094438 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:36:39.094442 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:36:39.094446 2016] [:error] [pid 9629] [client 127.0.0.1:40892] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:41:09.840678 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:41:09.840709 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Stack trace:
+[Mon Mar 21 10:41:09.840719 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:41:09.840726 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Mon Mar 21 10:41:09.840731 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:41:09.840917 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:41:09.840925 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Stack trace:
+[Mon Mar 21 10:41:09.840932 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:41:09.840937 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   2. yii\\log\\Logger->yii\\log\\{closure}() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:41:09.840941 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   3. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:120
+[Mon Mar 21 10:41:09.840946 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   4. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:41:09.840978 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Notice:  Trying to get property of non-object in /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php on line 181
+[Mon Mar 21 10:41:09.840982 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP Stack trace:
+[Mon Mar 21 10:41:09.840994 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   1. yii\\base\\ErrorHandler->handleException() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Mon Mar 21 10:41:09.840998 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   2. yii\\log\\Logger->flush() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:0
+[Mon Mar 21 10:41:09.841002 2016] [:error] [pid 9630] [client 127.0.0.1:40910] PHP   3. yii\\log\\Dispatcher->dispatch() /home/dev49/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Mon Mar 21 10:49:52.231574 2016] [:error] [pid 9629] [client 127.0.0.1:40958] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[Mon Mar 21 10:49:52.231610 2016] [:error] [pid 9629] [client 127.0.0.1:40958] PHP Fatal error:  Unknown: Failed opening required '/home/dev49/www/testAPI.loc/testAPI/api/web/index.php' (include_path='.:/usr/share/php:/usr/share/pear') in Unknown on line 0
+[Mon Mar 21 10:50:37.285500 2016] [autoindex:error] [pid 10009] [client 127.0.0.1:40964] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 10:53:38.168918 2016] [core:error] [pid 9630] [client 127.0.0.1:40997] AH00124: Request exceeded the limit of 10 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.
+[Mon Mar 21 10:54:27.780706 2016] [autoindex:error] [pid 10021] [client 127.0.0.1:41002] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 10:54:56.854105 2016] [autoindex:error] [pid 10010] [client 127.0.0.1:41007] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 13:58:41.167254 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP Warning:  require(/home/dev49/www/testAPI.loc/testAPI/api/web/../../common/config/bootstrap.php): failed to open stream: No such file or directory in /home/dev49/www/testAPI.loc/testAPI/api/web/index.php on line 7
+[Mon Mar 21 13:58:41.167284 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP Stack trace:
+[Mon Mar 21 13:58:41.167528 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP   1. {main}() /home/dev49/www/testAPI.loc/testAPI/api/web/index.php:0
+[Mon Mar 21 13:58:41.167548 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP Fatal error:  require(): Failed opening required '/home/dev49/www/testAPI.loc/testAPI/api/web/../../common/config/bootstrap.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/dev49/www/testAPI.loc/testAPI/api/web/index.php on line 7
+[Mon Mar 21 13:58:41.167551 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP Stack trace:
+[Mon Mar 21 13:58:41.167555 2016] [:error] [pid 12778] [client 127.0.0.1:42214] PHP   1. {main}() /home/dev49/www/testAPI.loc/testAPI/api/web/index.php:0
+[Mon Mar 21 14:38:07.340896 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP Warning:  require(/home/dev49/www/testAPI.loc/testAPI/api/web/../../common/config/bootstrap.php): failed to open stream: No such file or directory in /home/dev49/www/testAPI.loc/testAPI/api/web/index.php on line 7
+[Mon Mar 21 14:38:07.356885 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP Stack trace:
+[Mon Mar 21 14:38:07.356915 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP   1. {main}() /home/dev49/www/testAPI.loc/testAPI/api/web/index.php:0
+[Mon Mar 21 14:38:07.356937 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP Fatal error:  require(): Failed opening required '/home/dev49/www/testAPI.loc/testAPI/api/web/../../common/config/bootstrap.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/dev49/www/testAPI.loc/testAPI/api/web/index.php on line 7
+[Mon Mar 21 14:38:07.356950 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP Stack trace:
+[Mon Mar 21 14:38:07.356955 2016] [:error] [pid 14240] [client 127.0.0.1:42519] PHP   1. {main}() /home/dev49/www/testAPI.loc/testAPI/api/web/index.php:0
+[Mon Mar 21 14:47:53.257626 2016] [:error] [pid 12724] [client 127.0.0.1:42553] script '/home/dev49/www/testAPI.loc/testAPI/api/web/index.php' not found or unable to stat
+[Mon Mar 21 14:47:57.996112 2016] [autoindex:error] [pid 12724] [client 127.0.0.1:42553] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 14:48:16.053712 2016] [autoindex:error] [pid 12770] [client 127.0.0.1:42559] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 14:54:08.246749 2016] [autoindex:error] [pid 12726] [client 127.0.0.1:42622] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 14:55:09.346694 2016] [autoindex:error] [pid 20097] [client 127.0.0.1:42628] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/api/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 14:55:17.047310 2016] [:error] [pid 20098] [client 127.0.0.1:42629] script '/home/dev49/www/testAPI.loc/testAPI/api/web/index.php' not found or unable to stat
+[Mon Mar 21 14:58:40.009704 2016] [:error] [pid 20099] [client 127.0.0.1:42640] script '/home/dev49/www/testAPI.loc/testAPI/api/web/index.php' not found or unable to stat
+[Mon Mar 21 14:59:22.363358 2016] [autoindex:error] [pid 20100] [client 127.0.0.1:42646] AH01276: Cannot serve directory /home/dev49/www/testAPI.loc/testAPI/frontend/web/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 21 15:07:55.335087 2016] [authz_core:error] [pid 20774] [client 127.0.0.1:42761] AH01630: client denied by server configuration: /home/dev49/www/testAPI.loc/testAPI/api
