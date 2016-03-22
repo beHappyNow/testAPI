@@ -1,9 +1,7 @@
 <?php
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
-define('FACEBOOK_SDK_V4_SRC_DIR', __DIR__.'/../plugins/Facebook/');
 
-require(__DIR__ . '/../config/autoload.php');//including of specific Facebook library autoloader
 require(__DIR__ . '/../../vendor/autoload.php');
 require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 require(__DIR__ . '/../../common/config/bootstrap.php');
