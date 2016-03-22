@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -25,7 +27,7 @@ use Yii;
  * @property string $country
  * @property string $gender
  */
-class User extends \yii\db\ActiveRecord
+class User extends ActiveRecord implements IdentityInterface
 {
     /**
      * @inheritdoc
@@ -75,5 +77,37 @@ class User extends \yii\db\ActiveRecord
             'country' => 'Country',
             'gender' => 'Gender',
         ];
+    }
+
+    public function fields()
+    {
+        $fields = parent::fields();
+
+        //remove unsafe fields from response
+        unset($fields['auth_key'], $fields['password_hash'],$fields['username'],$fields['status'], $fields['password_reset_token']);
+
+        return $fields;
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return static::findOne(['access_token' => $token]);
+    }
+
+    public function getId()
+    {
+         return $this->id;
+    }
+
+    public static function findIdentity($id)
+    {
+    }
+
+    public function getAuthKey()
+    {
+    }
+
+    public function validateAuthKey($authKey)
+    {
     }
 }
