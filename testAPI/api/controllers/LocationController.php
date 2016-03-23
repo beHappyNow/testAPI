@@ -4,6 +4,7 @@ namespace api\controllers;
 
 use Yii;
 use app\models\User;
+use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use yii\web\ServerErrorHttpException;
@@ -48,6 +49,13 @@ class LocationController extends ActiveController
                 ],
             ],
         ];
+        $behaviors['timestamp'] = [
+            'class' => TimestampBehavior::className(),
+            'attributes' => [
+                ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+            ],
+        ];
         return $behaviors;
     }
 
@@ -61,8 +69,9 @@ class LocationController extends ActiveController
         return $actions;
     }
 
-    public function actionUpdate($access_token)
+    public function actionUpdate()
     {
+        $access_token = Yii::$app->getRequest()->get('access-token');
         $model = User::findIdentityByAccessToken($access_token);
 
         User::updateUser($model);

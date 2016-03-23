@@ -5,6 +5,7 @@ namespace app\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use yii\web\ServerErrorHttpException;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -114,6 +115,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function updateUser($model)
     {
         $model->load(Yii::$app->getRequest()->getBodyParams(), '');
+        $model->updated_at = time();
         if ($model->save() === false && !$model->hasErrors()) {
             throw new ServerErrorHttpException('Failed to update the object for unknown reason.');
         }
