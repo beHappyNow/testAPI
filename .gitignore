@@ -1,3 +1,4 @@
+/testAPI/api/runtime/debug
 /error.log
 /access.log
 # yii console command

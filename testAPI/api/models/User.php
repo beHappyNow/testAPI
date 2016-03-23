@@ -84,7 +84,7 @@ class User extends ActiveRecord implements IdentityInterface
         $fields = parent::fields();
 
         //remove unsafe fields from response
-        unset($fields['auth_key'], $fields['password_hash'],$fields['username'],$fields['status'], $fields['password_reset_token']);
+        unset($fields['auth_key'], $fields['password_hash'],$fields['username'],$fields['status'], $fields['password_reset_token'], $fields['access_token']);
 
         return $fields;
     }
@@ -109,5 +109,13 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function validateAuthKey($authKey)
     {
+    }
+
+    public static function updateUser($model)
+    {
+        $model->load(Yii::$app->getRequest()->getBodyParams(), '');
+        if ($model->save() === false && !$model->hasErrors()) {
+            throw new ServerErrorHttpException('Failed to update the object for unknown reason.');
+        }
     }
 }

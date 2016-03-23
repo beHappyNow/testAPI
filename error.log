@@ -136,3 +136,318 @@
 [Tue Mar 22 03:36:08.970046 2016] [:error] [pid 9731] [client 127.0.0.1:45180] PHP   6. yii\\base\\InlineAction->runWithParams() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/Controller.php:154
 [Tue Mar 22 03:36:08.970056 2016] [:error] [pid 9731] [client 127.0.0.1:45180] PHP   7. call_user_func_array() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/InlineAction.php:55
 [Tue Mar 22 03:36:08.970067 2016] [:error] [pid 9731] [client 127.0.0.1:45180] PHP   8. api\\controllers\\UserController->actionTestfb() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Wed Mar 23 00:17:14.028924 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:17:14.041488 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP Stack trace:
+[Wed Mar 23 00:17:14.041557 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   1. yii\\base\\ErrorHandler->handleException($exception = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:17:14.041573 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   2. yii\\log\\Logger->flush($final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:17:14.041589 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   3. yii\\log\\Dispatcher->dispatch($messages = *uninitialized*, $final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:17:14.041603 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   4. yii\\debug\\LogTarget->collect($messages = *uninitialized*, $final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:17:14.041615 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:17:14.041628 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   6. yii\\debug\\LogTarget->updateIndexFile($indexFile = *uninitialized*, $summary = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:17:14.041640 2016] [:error] [pid 3386] [client 127.0.0.1:47994] PHP   7. touch(*uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:20:16.633474 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:20:16.633497 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP Stack trace:
+[Wed Mar 23 00:20:16.633516 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   1. yii\\base\\ErrorHandler->handleException($exception = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:20:16.633525 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   2. yii\\log\\Logger->flush($final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:20:16.633533 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   3. yii\\log\\Dispatcher->dispatch($messages = *uninitialized*, $final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:20:16.633541 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   4. yii\\debug\\LogTarget->collect($messages = *uninitialized*, $final = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:20:16.633554 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:20:16.633562 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   6. yii\\debug\\LogTarget->updateIndexFile($indexFile = *uninitialized*, $summary = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:20:16.633569 2016] [:error] [pid 1077] [client 127.0.0.1:48020] PHP   7. touch(*uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:30:28.027967 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:30:28.027990 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP Stack trace:
+[Wed Mar 23 00:30:28.028001 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:30:28.028009 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:30:28.028017 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:30:28.028024 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:30:28.028030 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:30:28.028037 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:30:28.028044 2016] [:error] [pid 1079] [client 127.0.0.1:48179] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:30:52.227716 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:30:52.227737 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP Stack trace:
+[Wed Mar 23 00:30:52.227748 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:30:52.227756 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:30:52.227764 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:30:52.227770 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:30:52.227777 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:30:52.227784 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:30:52.227909 2016] [:error] [pid 3386] [client 127.0.0.1:48187] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:50:44.690535 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:50:44.690556 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP Stack trace:
+[Wed Mar 23 00:50:44.690566 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:50:44.690574 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:50:44.690582 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:50:44.690588 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:50:44.690595 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:50:44.690602 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:50:44.690608 2016] [:error] [pid 5243] [client 127.0.0.1:48445] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:51:06.362885 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:51:06.362905 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP Stack trace:
+[Wed Mar 23 00:51:06.362914 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:51:06.362922 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:51:06.362930 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:51:06.362936 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:51:06.362943 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:51:06.362949 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:51:06.362956 2016] [:error] [pid 4843] [client 127.0.0.1:48447] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:54:13.738975 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:54:13.738994 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP Stack trace:
+[Wed Mar 23 00:54:13.739004 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:54:13.772488 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:54:13.772517 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:54:13.772525 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:54:13.772532 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:54:13.772540 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:54:13.772547 2016] [:error] [pid 5243] [client 127.0.0.1:48478] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:54:25.231419 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:54:25.231440 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP Stack trace:
+[Wed Mar 23 00:54:25.231450 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:54:25.231459 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:54:25.231466 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:54:25.231473 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:54:25.231479 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:54:25.231486 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:54:25.231492 2016] [:error] [pid 4844] [client 127.0.0.1:48483] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:55:22.054638 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:55:22.054658 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP Stack trace:
+[Wed Mar 23 00:55:22.054667 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:55:22.054676 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:55:22.054683 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:55:22.054690 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:55:22.054702 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:55:22.054709 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:55:22.054715 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:55:37.082711 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:55:37.082729 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP Stack trace:
+[Wed Mar 23 00:55:37.082740 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:55:37.082747 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:55:37.082754 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:55:37.082760 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:55:37.082766 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:55:37.082773 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:55:37.082778 2016] [:error] [pid 3386] [client 127.0.0.1:48495] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:55:59.117277 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:55:59.117296 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP Stack trace:
+[Wed Mar 23 00:55:59.117307 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:55:59.117316 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:55:59.117323 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:55:59.117330 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:55:59.117337 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:55:59.117343 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:55:59.117349 2016] [:error] [pid 3386] [client 127.0.0.1:48537] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 00:58:52.082701 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 00:58:52.082733 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP Stack trace:
+[Wed Mar 23 00:58:52.082745 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 00:58:52.082753 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 00:58:52.082760 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 00:58:52.082766 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 00:58:52.082773 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 00:58:52.082779 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 00:58:52.082785 2016] [:error] [pid 1080] [client 127.0.0.1:48550] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:13.519543 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:13.519562 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:13.519573 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:13.519581 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:13.519588 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:13.519595 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:13.519602 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:13.519609 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:13.519615 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:14.963521 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:14.963540 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:14.963553 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:14.963561 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:14.963575 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:14.963582 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:14.963588 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:14.963594 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:14.963600 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:15.702982 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:15.703003 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:15.703018 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:15.703028 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:15.703038 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:15.703046 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:15.703054 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:15.703063 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:15.703070 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:16.189222 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:16.189240 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:16.189252 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:16.189260 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:16.189267 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:16.189274 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:16.189280 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:16.189667 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:16.189690 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:16.399938 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:16.399954 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:16.399965 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:16.399973 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:16.399980 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:16.399986 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:16.399992 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:16.399999 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:16.400005 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:16.627616 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:16.627631 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:16.627643 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:16.627651 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:16.627658 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:16.627664 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:16.627670 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:16.627676 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:16.627682 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:16.850383 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:16.850407 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:16.850425 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:16.850433 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:16.850440 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:16.850447 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:16.850453 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:16.850459 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:16.850465 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:17.070251 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:17.070278 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:17.070297 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:17.070310 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:17.070322 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:17.070333 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:17.070344 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:17.070355 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:17.070365 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:17.314032 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:17.314047 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:17.314059 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:17.314066 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:17.314073 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:17.314086 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:17.314093 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:17.314099 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:17.314105 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:17.477850 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:17.477865 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:17.477876 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:17.477884 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:17.477890 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:17.477896 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:17.477902 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:17.477909 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:17.477914 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:17.700007 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:17.700025 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP Stack trace:
+[Wed Mar 23 01:00:17.700039 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:17.700049 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:17.700059 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:17.700067 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:17.700075 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:17.700084 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:17.700091 2016] [:error] [pid 1077] [client 127.0.0.1:48569] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:23.615293 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:23.615313 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP Stack trace:
+[Wed Mar 23 01:00:23.615322 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:23.615330 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:23.615337 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:23.615343 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:23.615349 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:23.615356 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:23.615362 2016] [:error] [pid 4845] [client 127.0.0.1:48571] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:00:38.553214 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:00:38.553242 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP Stack trace:
+[Wed Mar 23 01:00:38.553261 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:00:38.553275 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:00:38.553287 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:00:38.553298 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:00:38.553309 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:00:38.553320 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:00:38.553329 2016] [:error] [pid 1079] [client 127.0.0.1:48573] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:05:27.436665 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:05:27.436687 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP Stack trace:
+[Wed Mar 23 01:05:27.436700 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:05:27.436718 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:05:27.436725 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:05:27.436732 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:05:27.436739 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:05:27.436745 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:05:27.436751 2016] [:error] [pid 5243] [client 127.0.0.1:48623] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:05:40.332937 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:05:40.332957 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP Stack trace:
+[Wed Mar 23 01:05:40.332968 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:05:40.332976 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:05:40.332982 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:05:40.332989 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:05:40.332994 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:05:40.333001 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:05:40.333006 2016] [:error] [pid 1077] [client 127.0.0.1:48625] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:05.519788 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:05.519810 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:05.519822 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:05.519830 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:05.519837 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:05.519844 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:05.519850 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:05.519863 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:05.519869 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:07.096885 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:07.096904 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:07.096914 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:07.096922 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:07.096929 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:07.096936 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:07.096942 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:07.096948 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:07.096954 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:07.639254 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:07.639270 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:07.639281 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:07.639289 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:07.639296 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:07.639302 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:07.639308 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:07.639315 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:07.639321 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:08.198499 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:08.198523 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:08.198533 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:08.198540 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:08.198547 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:08.198553 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:08.198560 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:08.198566 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:08.198572 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:08.796708 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:08.796723 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:08.796733 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:08.796741 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:08.796748 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:08.796754 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:08.796760 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:08.796766 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:08.796772 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:12.685141 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:12.685160 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP Stack trace:
+[Wed Mar 23 01:06:12.685171 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:12.685179 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:12.685186 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:12.685201 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:12.685208 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:12.685215 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:12.685221 2016] [:error] [pid 4844] [client 127.0.0.1:48627] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:06:46.032574 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:06:46.032600 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP Stack trace:
+[Wed Mar 23 01:06:46.032612 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:06:46.032621 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:06:46.032628 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:06:46.032635 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:06:46.032642 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:06:46.032649 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:06:46.032655 2016] [:error] [pid 3655] [client 127.0.0.1:48630] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
+[Wed Mar 23 01:24:51.583734 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP Warning:  touch(): Utime failed: Permission denied in /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php on line 75
+[Wed Mar 23 01:24:51.583751 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP Stack trace:
+[Wed Mar 23 01:24:51.583762 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   1. yii\\base\\ErrorHandler->handleException() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:0
+[Wed Mar 23 01:24:51.583771 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   2. yii\\log\\Logger->flush() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/ErrorHandler.php:111
+[Wed Mar 23 01:24:51.583778 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   3. yii\\log\\Dispatcher->dispatch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Logger.php:173
+[Wed Mar 23 01:24:51.583785 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   4. yii\\debug\\LogTarget->collect() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/log/Dispatcher.php:183
+[Wed Mar 23 01:24:51.583792 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   5. yii\\debug\\LogTarget->export() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:118
+[Wed Mar 23 01:24:51.583799 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   6. yii\\debug\\LogTarget->updateIndexFile() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:63
+[Wed Mar 23 01:24:51.583811 2016] [:error] [pid 4843] [client 127.0.0.1:48753] PHP   7. touch() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2-debug/LogTarget.php:75
