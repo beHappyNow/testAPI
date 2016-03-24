@@ -6,6 +6,18 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use yii\web\ServerErrorHttpException;
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+use Facebook\Entities\AccessToken;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+use Facebook\HttpClients\FacebookHttpable;
+use ImageHandler\CImageHandler;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -119,5 +131,61 @@ class User extends ActiveRecord implements IdentityInterface
         if ($model->save() === false && !$model->hasErrors()) {
             throw new ServerErrorHttpException('Failed to update the object for unknown reason.');
         }
+    }
+
+    public function facebookLogin()
+    {
+        $response = array(
+            'status' => false,
+        );
+
+        if (!empty($this->fb_token)) return $response;
+
+
+        $helper = new FacebookRedirectLoginHelper(Yii::$app->urlManager->createAbsoluteUrl('login'), Yii::$app->params['facebookApp']['app_id'], Yii::$app->params['facebookApp']['app_secret']);
+        FacebookSession::enableAppSecretProof(false);
+        $session = $helper->getSessionFromRedirect();
+        $userdata = $_SESSION['check_login'];
+        if (isset($session) && $userdata) {
+            // get long term token
+            $accessToken = $session->getAccessToken();
+            $facebook_user_token = $accessToken->extend(Yii::$app->params['facebookApp']['app_id'], Yii::$app->params['facebookApp']['app_secret']);
+            // graph api request for user data
+            if (!$this->fb_token) {
+                $this->fb_token = $facebook_user_token;
+
+                $request = new FacebookRequest( $session, 'GET', "/me", array(
+                    'fields' => 'picture,email,name',
+                ));
+
+                $me = $request->execute()->getGraphObject()->asArray();
+
+                if (isset($me['email'])) {
+                    $this->email = $me['email'];
+                }
+
+                if (isset($me['picture']->data->url)) {
+                    $ih = new CImageHandler();
+//                    $ih->load($me['picture']->data->url);
+                    $ih->load("http://test-api.live.gbksoft.net/api/web/images/18.jpg");
+                    $img_url = Yii::$app->urlManager->createAbsoluteUrl('web/images').mt_rand(0,50)."jpg";
+                    $ih->save($img_url);
+
+                    $this->picture = $img_url;
+                }
+            }
+        } else {
+            $permissions = array(
+                'email',
+                'public_profile',
+            );
+            $_SESSION['check_login'] = true;
+            $loginUrl = $helper->getLoginUrl($permissions);
+            $response = array(
+                'status' => 'redirect',
+                'url'    => $loginUrl,
+            );
+        }
+        return $response;
     }
 }
