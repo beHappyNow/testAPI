@@ -11,7 +11,6 @@ use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
 use yii\filters\AccessControl;
-use \ImageHandler\CImageHandler;
 
 
 class UserrController extends ActiveController
@@ -54,16 +53,50 @@ class UserrController extends ActiveController
     {
         $str =  Yii::$app->urlManager->createAbsoluteUrl('login');
 
-        $ih = new CImageHandler();
-//                    $ih->load($me['picture']->data->url);
-        $ih->load("http://test-api.live.gbksoft.net/api/web/images/18.jpg");
-        $img_url = Yii::$app->urlManager->createAbsoluteUrl('web/images').mt_rand(0,50)."jpg";
-        $ih->save($img_url);
+/*        $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
+        $file = file_get_contents($link);
+        file_put_contents("images/img".time()."_".mt_rand(100,999).".jpg", $file);*/
+        $values = [
+            'username' => 'Your username',
+            'email' => 'your@email.com',
+            'created_at' => time(),
+            'updated_at' => time(),
+            'first_name' => '',
+            'last_name' => '',
+            'image' => '',
+            'lat' => '',
+            'lon' => '',
+            'city' => '',
+            'country' => '',
+            'gender' => '',
+            'access_token' => '',
+            'fb_token' => '',
+            'api_token' => '',
+        ];
 
-        return  $str;
-
-        die();
         $model = new User();
+        $model->attributes = $values;
+
+        $response = $model->facebookLogin();
+        switch ($response['status']) {
+            case "redirect":
+            case "redirect_error":
+            case "success":
+            return $this->redirect($response['url'], 302);
+            break;
+            case "error":
+                return $response['message'];
+                break;
+        }
+
+        var_dump($model->attributes);
+        var_dump($model);
+        $model->access_token = $model->generateAccessToken();
+        var_dump($model->save());
+        var_dump($model);
+
+        return  $model->access_token;
+        die();
         $model->load(Yii::$app->getRequest()->getBodyParams(), '');
     }
 

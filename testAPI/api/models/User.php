@@ -17,7 +17,6 @@ use Facebook\GraphObject;
 use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
-use ImageHandler\CImageHandler;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -56,7 +55,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+            [['username', 'email', 'created_at', 'updated_at'], 'required'],
             [['status', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email', 'first_name', 'last_name', 'image', 'lat', 'lon', 'city', 'country', 'gender'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
@@ -97,7 +96,7 @@ class User extends ActiveRecord implements IdentityInterface
         $fields = parent::fields();
 
         //remove unsafe fields from response
-        unset($fields['auth_key'], $fields['password_hash'],$fields['username'],$fields['status'], $fields['password_reset_token'], $fields['access_token']);
+        unset($fields['auth_key'], $fields['password_hash'],$fields['username'],$fields['status'], $fields['password_reset_token'], $fields['access_token'], $fields['fb_token'], $fields['api_token']);
 
         return $fields;
     }
@@ -145,7 +144,7 @@ class User extends ActiveRecord implements IdentityInterface
         $helper = new FacebookRedirectLoginHelper(Yii::$app->urlManager->createAbsoluteUrl('login'), Yii::$app->params['facebookApp']['app_id'], Yii::$app->params['facebookApp']['app_secret']);
         FacebookSession::enableAppSecretProof(false);
         $session = $helper->getSessionFromRedirect();
-        $userdata = $_SESSION['check_login'];
+        $userdata = isset($_SESSION['check_login']) ? $_SESSION['check_login'] : false;
         if (isset($session) && $userdata) {
             // get long term token
             $accessToken = $session->getAccessToken();
@@ -160,18 +159,22 @@ class User extends ActiveRecord implements IdentityInterface
 
                 $me = $request->execute()->getGraphObject()->asArray();
 
+                if (isset($me['name'])) {
+                    $this->username = $me['name'];
+                }
+
                 if (isset($me['email'])) {
                     $this->email = $me['email'];
                 }
 
                 if (isset($me['picture']->data->url)) {
-                    $ih = new CImageHandler();
-//                    $ih->load($me['picture']->data->url);
-                    $ih->load("http://test-api.live.gbksoft.net/api/web/images/18.jpg");
-                    $img_url = Yii::$app->urlManager->createAbsoluteUrl('web/images').mt_rand(0,50)."jpg";
-                    $ih->save($img_url);
+//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
+                    $link = $me['picture']->data->url;
+                    $file = file_get_contents($link);
+                    $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
+                    file_put_contents($path_to_file, $file);
 
-                    $this->picture = $img_url;
+                    $this->image = Yii::$app->urlManager->createAbsoluteUrl($path_to_file);
                 }
             }
         } else {
@@ -187,5 +190,11 @@ class User extends ActiveRecord implements IdentityInterface
             );
         }
         return $response;
+    }
+
+    public function generateAccessToken()
+    {
+        $str = $this->created_at."salt";
+        return md5($str);
     }
 }
