@@ -132,7 +132,98 @@ class User extends ActiveRecord implements IdentityInterface
         }
     }
 
-    public function facebookLogin()
+    public function facebookLoginWeb($short_term_token)
+    {
+        try {
+            FacebookSession::enableAppSecretProof(false);
+            $session = new FacebookSession($short_term_token);
+            $accessToken = new AccessToken($short_term_token);
+            // get long term token
+            $facebook_user_token = $accessToken->extend(Yii::$app->params['facebookApp']['app_id'], Yii::$app->params['facebookApp']['app_secret']);
+            if (!$this->fb_token) {
+                $this->fb_token = $facebook_user_token;
+
+                // graph api request for user data
+                $request = new FacebookRequest( $session, 'GET', "/me", array(
+                    'fields' => 'picture,email,name',
+                ));
+
+                $me = $request->execute()->getGraphObject()->asArray();
+
+                if (isset($me['name'])) {
+                    $this->username = $me['name'];
+                    $name = explode(" ", $me['name']);
+
+                    if(count($name) > 1){
+                        $this->first_name = $name[0];
+                        $this->last_name = $name[1];
+                    }
+                }
+
+                if (isset($me['email'])) {
+                    $this->email = $me['email'];
+                }
+
+                if (isset($me['picture']->data->url)) {
+//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
+                    $link = $me['picture']->data->url;
+                    $file = file_get_contents($link);
+                    $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
+                    file_put_contents($path_to_file, $file);
+
+                    $this->image = Yii::$app->urlManager->createAbsoluteUrl($path_to_file);
+                }
+            }
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function facebookLogin($facebook_user_token)
+    {
+        $this->fb_token = $facebook_user_token;
+
+        FacebookSession::enableAppSecretProof(false);
+        $longLivedAccessToken = new AccessToken($facebook_user_token);
+        $session = new FacebookSession($longLivedAccessToken);
+        $request = new FacebookRequest(
+            $session,
+            'GET',
+            "/me",
+            array('fields' => 'picture,email,name',)
+        );
+        try {
+            $me = $request->execute()->getGraphObject()->asArray();
+
+            if (isset($me['name'])) {
+                $this->username = $me['name'];
+                $name = explode(" ", $me['name']);
+
+                if(count($name) > 1){
+                    $this->first_name = $name[0];
+                    $this->last_name = $name[1];
+                }
+            }
+
+            if (isset($me['email'])) {
+                $this->email = $me['email'];
+            }
+
+            if (isset($me['picture']->data->url)) {
+//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
+                $link = $me['picture']->data->url;
+                $file = file_get_contents($link);
+                $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
+                file_put_contents($path_to_file, $file);
+
+                $this->image = Yii::$app->urlManager->createAbsoluteUrl($path_to_file);
+            }
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function facebookFullLogin()
     {
         $response = array(
             'status' => false,
@@ -141,7 +232,11 @@ class User extends ActiveRecord implements IdentityInterface
         if (!empty($this->fb_token)) return $response;
 
 
-        $helper = new FacebookRedirectLoginHelper(Yii::$app->urlManager->createAbsoluteUrl('login'), Yii::$app->params['facebookApp']['app_id'], Yii::$app->params['facebookApp']['app_secret']);
+        $helper = new FacebookRedirectLoginHelper(
+            Yii::$app->urlManager->createAbsoluteUrl('login'),
+            Yii::$app->params['facebookApp']['app_id'],
+            Yii::$app->params['facebookApp']['app_secret']
+        );
         FacebookSession::enableAppSecretProof(false);
         $session = $helper->getSessionFromRedirect();
         $userdata = isset($_SESSION['check_login']) ? $_SESSION['check_login'] : false;
@@ -191,6 +286,9 @@ class User extends ActiveRecord implements IdentityInterface
         }
         return $response;
     }
+
+
+
 
     public function generateAccessToken()
     {
