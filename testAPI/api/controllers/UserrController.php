@@ -129,10 +129,13 @@ class UserrController extends ActiveController
     {
         $access_token = Yii::$app->getRequest()->get('access-token');
         $user = User::findIdentityByAccessToken($access_token);
-
+        $test = Yii::$app->request->bodyParams;
+        $file = file_get_contents("php://input");
 //        var_dump($user);
         var_dump($_REQUEST);
-        var_dump($_FILES);
+        var_dump($file);
+        var_dump($_SERVER);
+        var_dump($test);
 
 //        die;
 
@@ -141,7 +144,7 @@ class UserrController extends ActiveController
         $model = new UploadForm();
 
         if (Yii::$app->request->isPost) {
-            $model->image = UploadedFile::getInstance($model, 'file');
+            $model->image = UploadedFile::getInstance($model, 'image');
             var_dump($model);die();
             if ($model->image && $model->validate()) {
                 $path_to_file = 'images/img' . time()."_".mt_rand(100,999) . '.' . $model->file->extension;

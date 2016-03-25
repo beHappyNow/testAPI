@@ -537,3 +537,14 @@
 [Thu Mar 24 05:19:27.394090 2016] [:error] [pid 2816] [client 127.0.0.1:38948] PHP   6. yii\\base\\InlineAction->runWithParams($params = *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/Controller.php:154
 [Thu Mar 24 05:19:27.394112 2016] [:error] [pid 2816] [client 127.0.0.1:38948] PHP   7. call_user_func_array(*uninitialized*, *uninitialized*) /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/InlineAction.php:55
 [Thu Mar 24 05:19:27.394136 2016] [:error] [pid 2816] [client 127.0.0.1:38948] PHP   8. api\\controllers\\UserrController->actionLogin() /home/behappy/www/testAPI.loc/testAPI/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Fri Mar 25 10:07:24.209719 2016] [:error] [pid 1709] [client 127.0.0.1:55023] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:12:44.383406 2016] [:error] [pid 1707] [client 127.0.0.1:55037] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:13:18.997873 2016] [:error] [pid 3917] [client 127.0.0.1:55040] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:16:13.930158 2016] [:error] [pid 3926] [client 127.0.0.1:55045] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:21:58.838214 2016] [:error] [pid 3837] [client 127.0.0.1:55059] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:24:40.898086 2016] [:error] [pid 4061] [client 127.0.0.1:55073] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:34:52.971443 2016] [:error] [pid 1706] [client 127.0.0.1:55144] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:37:30.413751 2016] [:error] [pid 1708] [client 127.0.0.1:55153] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:41:29.542101 2016] [:error] [pid 3881] [client 127.0.0.1:55171] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:42:03.518814 2016] [:error] [pid 1710] [client 127.0.0.1:55173] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[Fri Mar 25 10:42:24.140470 2016] [:error] [pid 1709] [client 127.0.0.1:55176] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0

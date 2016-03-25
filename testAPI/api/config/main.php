@@ -32,7 +32,7 @@ return [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,//comment this line to set app in web mode
+//            'enableStrictParsing' => true,//comment this line to set app in web mode
             'showScriptName' => false,
             'rules' => [
                 'POST login' => 'userr/login',

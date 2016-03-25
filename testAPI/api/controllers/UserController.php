@@ -8,6 +8,9 @@ use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\UploadForm;
+use yii\web\UploadedFile;
+
 
 
 /**
@@ -121,5 +124,20 @@ class UserController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionForm()
+    {
+        $model = new UploadForm();
+
+        if (Yii::$app->request->isPost) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+
+            if ($model->image && $model->validate()) {
+                $model->image->saveAs('images/' . $model->image->baseName . '.' . $model->image->extension);
+            }
+        }
+
+        return $this->render('form', ['model' => $model]);
     }
 }
