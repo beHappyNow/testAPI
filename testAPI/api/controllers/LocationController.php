@@ -6,17 +6,17 @@ use Yii;
 use app\models\User;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
-use yii\web\ServerErrorHttpException;
 use yii\rest\ActiveController;
 use yii\filters\auth\CompositeAuth;
-use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
-
+/**
+ * test controller used to explore the possibilities of the framework
+ * the only useful action actionUpdateLocation() can be implemented in UserController
+ */
 class LocationController extends ActiveController
 {
     public $modelClass = 'app\models\User';
@@ -69,7 +69,7 @@ class LocationController extends ActiveController
         return $actions;
     }
 
-    public function actionUpdate()
+    public function actionUpdateLocation()
     {
         $access_token = Yii::$app->getRequest()->get('access-token');
         $model = User::findIdentityByAccessToken($access_token);

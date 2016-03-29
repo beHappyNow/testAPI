@@ -35,12 +35,13 @@ return [
 //            'enableStrictParsing' => true,//comment this line to set app in web mode
             'showScriptName' => false,
             'rules' => [
-                'POST login' => 'userr/login',
-                'POST profile' => 'userr/upload',
-                'GET,POST login-web' => 'userr/login-web',
-                'PUT locations' => 'location/update',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'userr'],
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'location'],
+                'POST login' => 'user/login',
+                'POST login-web' => 'user/login-web',
+                'POST profile' => 'user/upload',
+                'GET profile' => 'user/profile',
+                'GET users/search' => 'user/search',
+                'POST location' => 'location/update-location',
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
 
             ],
         ],

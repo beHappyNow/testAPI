@@ -4,140 +4,192 @@ namespace api\controllers;
 
 use Yii;
 use app\models\User;
-use app\models\UserSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
+use yii\helpers\Url;
+use yii\rest\ActiveController;
+use yii\filters\auth\CompositeAuth;
+use yii\filters\auth\HttpBasicAuth;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
+use yii\filters\AccessControl;
 
 
-
-/**
- * UserController implements the CRUD actions for User model.
- */
-class UserController extends Controller
+class UserController extends ActiveController
 {
-    /**
-     * @inheritdoc
-     */
+    public $modelClass = 'app\models\User';
+
     public function behaviors()
     {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator'] = [
+            'class' => CompositeAuth::className(),
+            'authMethods' => [
+                HttpBearerAuth::className(),
+                QueryParamAuth::className(),
             ],
+            'except' => ['login', 'login-web']
         ];
+
+        $behaviors['access'] = [
+        'class' => AccessControl::className(),
+
+        'only' => ['index', 'view', 'create', 'update', 'delete', 'options','login', 'loginWeb', 'upload', 'search'],
+        'rules' => [
+            [
+                'allow' => true,
+                'actions' => ['index', 'view', 'create', 'update', 'delete', 'options', 'upload', 'search'],
+                'roles' => ['@'],
+            ],
+            [
+                'allow' => true,
+                'actions' => ['login', 'loginWeb'],
+                'roles' => ['?'],
+            ],
+        ],
+    ];
+        return $behaviors;
     }
 
-    /**
-     * Lists all User models.
-     * @return mixed
-     */
-    public function actionIndex()
+    public function actionLogin()
     {
-        $searchModel = new UserSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $facebook_user_token = Yii::$app->getRequest()->post('fb_token');
+        if($facebook_user_token){
+            $values = [
+                'username' => 'Your username',
+                'email' => 'your@email.com',
+                'created_at' => time(),
+                'updated_at' => time(),
+                'first_name' => '',
+                'last_name' => '',
+                'image' => '',
+                'lat' => '',
+                'lon' => '',
+                'city' => '',
+                'country' => '',
+                'gender' => '',
+                'access_token' => '',
+                'fb_token' => '',
+                'api_token' => '',
+            ];
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
+            $model = new User();
+            $model->attributes = $values;
 
-    /**
-     * Displays a single User model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
+        try {
+            $model->facebookLogin($facebook_user_token);
+//            $model->facebookLogin("CAAH9dNa9ZAcMBAP4U7W5cCZBhb5UKbCQrhS9e52OWqNxZBgDecBtQUZC33k3pya9WLNgXlSuoFfZBSfpvZCjTLZBAigIfSbHsG7vLZBOTsUbu4wZCzq3RsvVTxi3ZCiOnTL88SxssVdWPiR9fLpfFYZARGulN1zxZAVdHAw6vXgNNIyLi2NdWxLcHmwqvtRO4NrqtvcePmTjV1oCX9iIJGb9FZA48");
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
 
-    /**
-     * Creates a new User model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new User();
+            $model->access_token = $model->generateAccessToken();
+            $model->save();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return  $model->access_token;
         } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+            return  "There aren't required parameter with name - 'fb_token'";
         }
     }
 
-    /**
-     * Updates an existing User model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionUpdate($id)
+    public function actionLoginWeb()
     {
-        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $short_term_token = Yii::$app->getRequest()->post('code');
+        if ($short_term_token) {
+            $values = [
+                'username' => 'Your username',
+                'email' => 'your@email.com',
+                'created_at' => time(),
+                'updated_at' => time(),
+                'first_name' => '',
+                'last_name' => '',
+                'image' => '',
+                'lat' => '',
+                'lon' => '',
+                'city' => '',
+                'country' => '',
+                'gender' => '',
+                'access_token' => '',
+                'fb_token' => '',
+                'api_token' => '',
+            ];
+
+            $model = new User();
+            $model->attributes = $values;
+
+            $model->facebookLoginWeb($short_term_token);
+
+            $model->access_token = $model->generateAccessToken();
+            $model->save();
+
+            return  $model->access_token;
         } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+            return  "There aren't required parameter with name - 'code'";
         }
     }
 
-    /**
-     * Deletes an existing User model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionDelete($id)
+    public function actionUpload()
     {
-        $this->findModel($id)->delete();
+        //get user by access token
+        $access_token = Yii::$app->getRequest()->get('access-token');
+        $user = User::findIdentityByAccessToken($access_token);
 
-        return $this->redirect(['index']);
-    }
-
-    /**
-     * Finds the User model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return User the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id)
-    {
-        if (($model = User::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-
-    public function actionForm()
-    {
+        //process the received data
         $model = new UploadForm();
 
         if (Yii::$app->request->isPost) {
-            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->image = UploadedFile::getInstanceByName('image');  //get uploaded image
 
-            if ($model->image && $model->validate()) {
-                $model->image->saveAs('images/' . $model->image->baseName . '.' . $model->image->extension);
+            if ($model->image && $model->validate()) {  //if file is present and is valid
+                $path_to_file = 'images/img' . time()."_".mt_rand(100,999) . '.' . $model->file->extension; //generate unique name
+                $model->image->saveAs($path_to_file); //save image on server
+                $user->image = Yii::$app->urlManager->createAbsoluteUrl($path_to_file); //update model
+                $user->save();
             }
+
+            User::updateUser($user); //update another fields
+        } else {
+            return "POST method is only available for this action";
+        }
+        return $user;
+    }
+
+    public function actionProfile()
+    {
+        //get user by access token
+        $access_token = Yii::$app->getRequest()->get('access-token');
+        $user = User::findIdentityByAccessToken($access_token);
+        return $user;
+    }
+
+    public function actionSearch()
+    {
+        $user_list = [];
+
+        //get user by access token
+        $access_token = Yii::$app->getRequest()->get('access-token');
+        $user = User::findIdentityByAccessToken($access_token);
+        $search_string = Yii::$app->getRequest()->get('search_string');
+        $radius = Yii::$app->getRequest()->get('radius');
+        $lat = Yii::$app->getRequest()->get('lat');
+        $lon = Yii::$app->getRequest()->get('lon');
+        if (!$lat) {
+            $lat = $user->lat;
+        }
+        if (!$lon) {
+            $lon = $user->lon;
+        }
+        $my_id  = $user->id;
+        
+        if (!is_null($search_string)){
+            $user_list = User::searchByString($search_string, $my_id);
+        } elseif(!is_null($radius) && !is_null($lat) && !is_null($lon)){
+            $user_list = User::searchByRadius($lat, $lon, $radius, $my_id);
+        } else {
+            $user_list = User::find()->andWhere('id!=:my_id',array(':my_id' => $my_id))->all();
         }
 
-        return $this->render('form', ['model' => $model]);
+        return $user_list;
     }
 }

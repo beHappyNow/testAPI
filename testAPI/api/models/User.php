@@ -125,7 +125,7 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function updateUser($model)
     {
-        $model->load(Yii::$app->getRequest()->getBodyParams(), '');
+        $model->load(Yii::$app->request->post(), '');
         $model->updated_at = time();
         if ($model->save() === false && !$model->hasErrors()) {
             throw new ServerErrorHttpException('Failed to update the object for unknown reason.');
@@ -165,7 +165,6 @@ class User extends ActiveRecord implements IdentityInterface
                 }
 
                 if (isset($me['picture']->data->url)) {
-//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
                     $link = $me['picture']->data->url;
                     $file = file_get_contents($link);
                     $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
@@ -206,11 +205,18 @@ class User extends ActiveRecord implements IdentityInterface
             }
 
             if (isset($me['email'])) {
-                $this->email = $me['email'];
+                //check for duplicate emails
+                $arr = User::find()->where(['email'=>$me['email']])->all();
+                if($arr){
+                    //throw exception with notification, if there are user, with such email, in database
+                    throw new \Exception('User with such email already exists!');
+                } else {
+                    //setup, if duplicates weren't found
+                    $this->email = $me['email'];
+                }
             }
 
             if (isset($me['picture']->data->url)) {
-//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
                 $link = $me['picture']->data->url;
                 $file = file_get_contents($link);
                 $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
@@ -219,7 +225,7 @@ class User extends ActiveRecord implements IdentityInterface
                 $this->image = Yii::$app->urlManager->createAbsoluteUrl($path_to_file);
             }
         } catch (\Exception $e) {
-            return $e->getMessage();
+            throw new \Exception($e->getMessage());
         }
     }
 
@@ -230,7 +236,6 @@ class User extends ActiveRecord implements IdentityInterface
         );
 
         if (!empty($this->fb_token)) return $response;
-
 
         $helper = new FacebookRedirectLoginHelper(
             Yii::$app->urlManager->createAbsoluteUrl('login'),
@@ -263,7 +268,6 @@ class User extends ActiveRecord implements IdentityInterface
                 }
 
                 if (isset($me['picture']->data->url)) {
-//                    $link = "http://test-api.live.gbksoft.net/api/web/images/18.jpg";
                     $link = $me['picture']->data->url;
                     $file = file_get_contents($link);
                     $path_to_file = "images/img".time()."_".mt_rand(100,999).".jpg";
@@ -287,7 +291,44 @@ class User extends ActiveRecord implements IdentityInterface
         return $response;
     }
 
+    public static function searchByRadius($lat, $lon, $radius, $my_id)
+    {
+        $one_km = 0.00900122416; // one kilometer = such part of 1 degree of latitude/longtitude
+        $max_lat = floatval($lat) + floatval($radius)*$one_km;
+        $min_lat = floatval($lat) - floatval($radius)*$one_km;
+        $max_lon = floatval($lon) + floatval($radius)*$one_km;
+        $min_lon = floatval($lon) - floatval($radius)*$one_km;
+        $arr1 = User::find()
+            ->where('lat<:start', array(':start' => $max_lat))
+            ->andWhere('lat>:end', array(':end' => $min_lat))
+            ->andWhere('lon<:start', array(':start' => $max_lon))
+            ->andWhere('lon>:end', array(':end' => $min_lon))
+            ->andWhere('id!=:my_id',array(':my_id' => $my_id)) //except ourselves
+            ->all();
 
+        return $arr1;
+    }
+
+    public static function searchByString($search_string, $my_id)
+    {
+        $search_arr = explode(' ',$search_string, 2);
+        if(count($search_arr)>1){
+            $arr1 = User::find()
+                ->where(['like','last_name', $search_arr[0]])
+                ->orWhere(['like','last_name', $search_arr[1]])
+                ->orWhere(['like','first_name', $search_arr[0]])
+                ->orWhere(['like','first_name', $search_arr[1]])
+                ->andWhere('id!=:my_id',array(':my_id' => $my_id)) //except ourselves
+                ->all();
+        } else {
+            $arr1 = User::find()
+                ->where(['like','last_name', $search_arr[0]])
+                ->orWhere(['like','first_name', $search_arr[0]])
+                ->andWhere('id!=:my_id',array(':my_id' => $my_id)) //except ourselves
+                ->all();
+        }
+        return $arr1;
+    }
 
 
     public function generateAccessToken()
